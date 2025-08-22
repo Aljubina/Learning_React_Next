@@ -1,0 +1,44 @@
+<!--<html>
+  <body>
+    <h1 id = "heading">My App</h1>
+    <div id = "app"></div>
+    <script type="text/javascript">
+        const app = document.getElementById('app');
+        const heading = document.getElementById('heading');
+
+        //create a new h2 element
+        const  head = document.createElement('h2'); 
+        const text = 'Welcome to My App';
+        const headerContent = document.createTextNode(text);
+        //append the text to the h2 element
+        head.appendChild(headerContent);
+        //append the h2 element to the app div
+        app.appendChild(head);
+
+        //create a new paragraph element
+        const para = document.createElement('p');
+        const text2 = "This is a mental wellness app";
+        const paraContent = document.createTextNode(text2);
+        para.appendChild(paraContent);
+        app.appendChild(para);
+    </script>
+  </body>
+</html> -->
+
+
+
+<html>
+  <body>
+    <div id="app"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <!-- Babel Script  : Javascript Compiler that compiles JSX (syntax extention of Javascript) that allow u to deascribe UI in familiar HTML like syntax -->
+    <!-- Babel transform JSX code in regular Javascrpt cus browser doesnt understand JSX  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/jsx">
+      const domNode = document.getElementById('app');
+      const root = ReactDOM.createRoot(domNode);
+      root.render(<h1>My App</h1>);
+    </script>
+  </body>
+</html>
