@@ -23,3 +23,59 @@ In Next.js, you can use a **special `layout.tsx` file** to create UI that is sha
 
 ---
 🚀 With `layout.tsx`, you can keep reusable UI (like navbars, sidebars, or footers) in one place, and focus on building unique content inside `page.tsx`.
+
+# Choosing How to Fetch Data
+
+This guide explains different approaches to fetching data in your application, along with when and why you might use each.
+
+---
+
+## 1. API Layer
+APIs act as an intermediary layer between your application code and database.  
+
+You might use an API layer when:  
+- You're using third-party services that expose an API.  
+- You're fetching data from the client and want to **avoid exposing database secrets** by running the API logic on the server.  
+
+---
+
+## 2. Database Queries
+When creating API endpoints, you’ll need to write queries to interact with your database.  
+
+- If you’re using **React Server Components** (fetching data on the server), you can **skip the API layer**.  
+- In this case, you can query your database directly without risking exposing database secrets to the client.  
+
+---
+
+## 3. Using Server Components to Fetch Data
+Server Components allow you to fetch data directly on the server.  
+This avoids shipping sensitive information to the client while enabling efficient rendering.  
+
+---
+
+## 4. Using SQL
+SQL queries provide fine-grained control over how data is fetched and manipulated.  
+These can be written inside your API routes or server components, depending on your application’s architecture.  
+
+---
+
+# Rendering Strategies
+
+## Static Rendering
+With **static rendering**, data fetching and rendering happens **at build time** (during deployment) or when **revalidating data**.  
+- Best suited for pages where data does not change frequently.  
+
+---
+
+## Dynamic Rendering
+With **dynamic rendering**, content is rendered on the server **at request time**, when a user visits the page.  
+
+### Benefits:
+- **Real-Time Data** – Keeps data fresh and up-to-date.  
+- **User-Specific Content** – Enables personalization (dashboards, profiles, etc.).  
+- **Request-Time Information** – Access cookies, URL search parameters, or other request-specific data.  
+
+---
+
+✅ Use **Static Rendering** for rarely changing data.  
+✅ Use **Dynamic Rendering** for real-time, personalized, or frequently updated content.  
