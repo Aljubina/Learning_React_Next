@@ -90,3 +90,14 @@ Streaming is a **data transfer technique** that allows you to break down a route
 - You can **prevent slow data requests** from blocking your whole page.  
 - Users can **see and interact** with parts of the page without waiting for all the data to load.  
 - This improves **performance** and **user experience** by rendering UI incrementally.  
+
+# ⚡ Partial Prerendering (PPR)
+
+**Partial Prerendering (PPR)** is a new rendering model that allows you to combine the benefits of **static** and **dynamic rendering** in the same route.  
+
+PPR uses **React's Suspense** to defer rendering parts of your application until a certain condition is met (e.g., data is loaded).  
+
+✅ Benefits of PPR:  
+- Combines **fast static rendering** with **flexible dynamic rendering**.  
+- Improves **performance** by serving static content immediately.  
+- Defers expensive or data-dependent UI until it's ready.  
