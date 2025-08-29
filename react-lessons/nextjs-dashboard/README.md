@@ -79,3 +79,14 @@ With **dynamic rendering**, content is rendered on the server **at request time*
 
 ✅ Use **Static Rendering** for rarely changing data.  
 ✅ Use **Dynamic Rendering** for real-time, personalized, or frequently updated content.  
+
+---
+
+# 📡 What is Streaming?
+
+Streaming is a **data transfer technique** that allows you to break down a route into smaller **"chunks"** and progressively stream them from the server to the client as they become ready.  
+
+✅ By using streaming:  
+- You can **prevent slow data requests** from blocking your whole page.  
+- Users can **see and interact** with parts of the page without waiting for all the data to load.  
+- This improves **performance** and **user experience** by rendering UI incrementally.  
