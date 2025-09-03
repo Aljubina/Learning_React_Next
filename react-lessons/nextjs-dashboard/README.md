@@ -96,3 +96,28 @@ PPR uses **React's Suspense** to defer rendering parts of your application until
 - Combines **fast static rendering** with **flexible dynamic rendering**.  
 - Improves **performance** by serving static content immediately.  
 - Defers expensive or data-dependent UI until it's ready.  
+
+---
+# Adding Search and Pagination
+
+### Components
+1. `<Search />` → search for specific invoices  
+2. `<Pagination />` → navigate between pages  
+3. `<Table />` → displays invoices  
+
+---
+
+### Search with URL Params
+- **Bookmarkable & shareable URLs**  
+- **Server-side rendering**  
+- **Analytics & tracking**  
+
+---
+
+### Hooks for Search Functionality
+- **useSearchParams** → access URL parameters  
+  - Example: `/dashboard/invoices?page=1&query=pending`  
+    → `{ page: '1', query: 'pending' }`  
+- **usePathname** → read current pathname  
+  - Example: `/dashboard/invoices` → `'/dashboard/invoices'`  
+- **useRouter** → programmatic navigation between routes  
